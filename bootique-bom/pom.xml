@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.nhl.bootique.bom</groupId>
+		<artifactId>bootique-bom-parent</artifactId>
+		<version>0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>bootique-bom</artifactId>
+	<packaging>pom</packaging>
+
+	<name>A Bill of Materials (BOM) for Bootique and its standard extensions</name>
+	<description>Provides a Maven "Bill of Materials" (BOM) for the projects using Bootique to 
+		ensure consistency of the versions of all included standard extensions. Should be used 
+		with "imported" scope 
+		per https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Importing_Dependencies
+	</description>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.nhl.bootique</groupId>
+				<artifactId>bootique</artifactId>
+				<version>0.12-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.nhl.bootique.cayenne</groupId>
+				<artifactId>bootique-cayenne</artifactId>
+				<version>0.12-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.nhl.bootique.jdbc</groupId>
+				<artifactId>bootique-jdbc</artifactId>
+				<version>0.9-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.nhl.bootique.jersey</groupId>
+				<artifactId>bootique-jersey</artifactId>
+				<version>0.11-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.nhl.bootique.jetty</groupId>
+				<artifactId>bootique-jetty</artifactId>
+				<version>0.11-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.nhl.bootique.jetty</groupId>
+				<artifactId>bootique-jetty-instrumented</artifactId>
+				<version>0.11-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.nhl.bootique.job</groupId>
+				<artifactId>bootique-job</artifactId>
+				<version>0.9-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.nhl.bootique.linkmove</groupId>
+				<artifactId>bootique-linkmove</artifactId>
+				<version>0.8-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.nhl.bootique.linkrest</groupId>
+				<artifactId>bootique-linkrest</artifactId>
+				<version>0.6-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.nhl.bootique.liquibase</groupId>
+				<artifactId>bootique-liquibase</artifactId>
+				<version>0.8-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.nhl.bootique.logback</groupId>
+				<artifactId>bootique-logback</artifactId>
+				<version>0.8-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.nhl.bootique.metrics</groupId>
+				<artifactId>bootique-metrics</artifactId>
+				<version>0.6-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.nhl.bootique.zookeeper</groupId>
+				<artifactId>bootique-zookeeper</artifactId>
+				<version>0.8-SNAPSHOT</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<!-- Optional profile used to sign artifacts -->
+	<profiles>
+		<profile>
+			<id>gpg</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>
