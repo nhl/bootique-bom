@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
@@ -48,7 +49,7 @@ public class JobAppIT {
 	}
 
 	@Test
-	public void testList() throws InterruptedException, ExecutionException, TimeoutException {
+	public void testList() {
 		CommandOutcome outcome = app.run("--list");
 		assertEquals(0, outcome.getExitCode());
 
@@ -57,7 +58,7 @@ public class JobAppIT {
 	}
 
 	@Test
-	public void testList_BadConfig_Ignored() throws InterruptedException, ExecutionException, TimeoutException {
+	public void testList_BadConfig_Ignored() {
 		CommandOutcome outcome = app.run("--config=src/test/resources/com/nhl/bootique/bom/job/no-such.yml", "--list");
 		assertEquals(0, outcome.getExitCode());
 
@@ -66,13 +67,40 @@ public class JobAppIT {
 	}
 
 	@Test
-	public void testExec() throws InterruptedException, ExecutionException, TimeoutException {
+	public void testExec() {
 
-		BomJob.lastResult = null;
+		BomJob.COUNTER.set(0);
 
 		CommandOutcome outcome = app.run("--exec", "--job=bom");
 		assertEquals(0, outcome.getExitCode());
-		assertEquals("bom-job-finished", BomJob.lastResult);
+		assertEquals(1l, BomJob.COUNTER.get());
+	}
+
+	@Test
+	public void testSchedule() throws InterruptedException, ExecutionException, TimeoutException {
+
+		BomJob.COUNTER.set(0);
+		BomParameterizedJob.COUNTER.set(0);
+
+		// since ShceduleCommand main thread blocks, run the server in a
+		// separate thread...
+
+		Future<CommandOutcome> result = executor.submit(() -> {
+			return app.run("--config=src/test/resources/com/nhl/bootique/bom/job/test.yml", "--schedule");
+		});
+
+		// wait for scheduler to start and run some jobs...
+		Thread.sleep(3000);
+
+		// since we exited via interrupt, the result of the --server command
+		// will look like a failure
+		executor.shutdownNow();
+		CommandOutcome outcome = result.get(3, TimeUnit.SECONDS);
+		assertEquals(1, outcome.getExitCode());
+		
+		assertTrue(BomJob.COUNTER.get() > 3);
+		assertTrue(BomParameterizedJob.COUNTER.get() > 17 * 3);
+		assertEquals(0, BomParameterizedJob.COUNTER.get() % 17);
 	}
 
 }
