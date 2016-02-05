@@ -9,7 +9,7 @@ import org.junit.Test;
 
 import com.nhl.bootique.command.CommandOutcome;
 
-public class JdbcAppTest {
+public class JdbcAppIT {
 
 	private JdbcApp app;
 
