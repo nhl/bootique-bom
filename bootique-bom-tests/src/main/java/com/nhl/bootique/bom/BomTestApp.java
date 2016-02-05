@@ -1,8 +1,5 @@
 package com.nhl.bootique.bom;
 
-import java.io.ByteArrayOutputStream;
-import java.nio.charset.Charset;
-
 import com.nhl.bootique.BQRuntime;
 import com.nhl.bootique.Bootique;
 import com.nhl.bootique.command.CommandOutcome;
@@ -14,15 +11,16 @@ import com.nhl.bootique.log.DefaultBootLogger;
  */
 public abstract class BomTestApp {
 
-	private ByteArrayOutputStream stdout;
-	private ByteArrayOutputStream stderr;
+	private InMemoryPrintStream stdout;
+	private InMemoryPrintStream stderr;
 
 	public BomTestApp() {
-		this.stdout = new ByteArrayOutputStream();
-		this.stderr = new ByteArrayOutputStream();
+		this.stdout = new InMemoryPrintStream(System.out);
+		this.stderr = new InMemoryPrintStream(System.err);
 	}
 
 	public CommandOutcome run(String... args) {
+
 		Bootique bootique = Bootique.app(args).bootLogger(createBootLogger());
 		configure(bootique);
 
@@ -37,14 +35,14 @@ public abstract class BomTestApp {
 	protected abstract void configure(Bootique bootique);
 
 	protected BootLogger createBootLogger() {
-		return new DefaultBootLogger(true, new TracingPrintStream(stdout), new TracingPrintStream(stderr));
+		return new DefaultBootLogger(true, stdout, stderr);
 	}
 
 	public String getStdout() {
-		return new String(stdout.toByteArray(), Charset.forName("UTF-8"));
+		return stdout.toString();
 	}
 
 	public String getStderr() {
-		return new String(stderr.toByteArray(), Charset.forName("UTF-8"));
+		return stderr.toString();
 	}
 }
