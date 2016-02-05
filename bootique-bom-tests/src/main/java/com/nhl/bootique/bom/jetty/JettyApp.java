@@ -1,4 +1,4 @@
-package com.nhl.bootique.bom.jdbc;
+package com.nhl.bootique.bom.jetty;
 
 import com.google.inject.Binder;
 import com.google.inject.Module;
@@ -7,15 +7,16 @@ import com.nhl.bootique.Bootique;
 import com.nhl.bootique.bom.BomTestApp;
 import com.nhl.bootique.jdbc.JdbcModule;
 
-public class JdbcApp extends BomTestApp implements Module {
+public class JettyApp extends BomTestApp implements Module {
 
 	@Override
 	protected void configure(Bootique bootique) {
-		bootique.module(JdbcModule.class).module(this);
+		bootique.module(JdbcModule.class).override(BQCoreModule.class).with(this);
 	}
 
 	@Override
 	public void configure(Binder binder) {
-		BQCoreModule.contributeCommands(binder).addBinding().to(RunSQLCommand.class);
+		// TODO Auto-generated method stub
+
 	}
 }

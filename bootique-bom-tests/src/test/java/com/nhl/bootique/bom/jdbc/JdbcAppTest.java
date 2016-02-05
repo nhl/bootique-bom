@@ -15,7 +15,7 @@ public class JdbcAppTest {
 
 	@Before
 	public void before() {
-		app = new JdbcApp();
+		this.app = new JdbcApp();
 	}
 
 	@Test
@@ -39,7 +39,7 @@ public class JdbcAppTest {
 		assertTrue(data.contains("1,aa"));
 		assertTrue(data.contains("2,bb"));
 	}
-	
+
 	@Test
 	public void testRun_SQL_2() {
 		CommandOutcome outcome = app.run("--config=src/test/resources/com/nhl/bootique/bom/jdbc/test.yml", "--runsql",
