@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/nhl/bootique-bom.svg)](https://travis-ci.org/nhl/bootique-bom)
 
-A "Bill of Materials" (BOM) project for [Bootique](https://github.com/nhl/bootique) users. Helps projects using Bootique to maintain consistent versions of Bootique and its standard extensions. Usage - ```pom.xml```:
+A "Bill of Materials" (BOM) project, that helps user projects to maintain consistent versions of various [Bootique](https://github.com/nhl/bootique)-related dependencies. It declares a certain version of Bootique plus compatible versions of all standard Bootique extension Modules. Intended to be imported in an aplication ```pom.xml``` as shown below:
 
 ```xml
 <dependencyManagement>
@@ -21,11 +21,12 @@ A "Bill of Materials" (BOM) project for [Bootique](https://github.com/nhl/bootiq
 </dependencyManagement>
 ...
 <dependencies>
-	<!-- Here declare only the  Modules you app requires, and without version -->
+	<!-- Here declare only the  Modules you app requires; omit their versions 
+	     (which will be coming from the import above 
+	-->
 	<dependency>
 		<groupId>com.nhl.bootique</groupId>
 		<artifactId>bootique</artifactId>
-		<scope>compile</scope>
 	</dependency>
 	<dependency>
 		<groupId>com.nhl.bootique.cayenne</groupId>
@@ -34,12 +35,10 @@ A "Bill of Materials" (BOM) project for [Bootique](https://github.com/nhl/bootiq
 	<dependency>
 		<groupId>com.nhl.bootique.jersey</groupId>
 		<artifactId>bootique-jersey</artifactId>
-		<scope>compile</scope>
 	</dependency>
 	<dependency>
 		<groupId>com.nhl.bootique.logback</groupId>
 		<artifactId>bootique-logback</artifactId>
-		<scope>compile</scope>
 	</dependency>
 </dependencies>
 ```

@@ -11,7 +11,9 @@
 
 	<groupId>com.nhl.bootique.bom</groupId>
 	<artifactId>bootique-bom-parent</artifactId>
-	<version>0.1-SNAPSHOT</version>
+	
+	<!-- Keeping this version in sync with Bootique version -->
+	<version>0.12-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Parent of Bootique BOM</name>
