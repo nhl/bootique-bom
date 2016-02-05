@@ -28,6 +28,11 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+			<dependency>
+				<groupId>org.apache.derby</groupId>
+				<artifactId>derby</artifactId>
+				<version>10.12.1.1</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -43,7 +48,11 @@
 			<artifactId>mockito-core</artifactId>
 			<scope>test</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derby</artifactId>
+			<scope>test</scope>
+		</dependency>
 
 		<!-- All the stuff coming from the BOM ("compile" scope) -->
 		<dependency>
