@@ -8,6 +8,8 @@ A "Bill of Materials" (BOM) project, that helps user projects to maintain consis
 		<dependency>
 			<groupId>com.nhl.bootique.bom</groupId>
 			<artifactId>bootique-bom</artifactId>
+			
+			<!-- This version usually matches the version of the main Bootioque Module. -->
 			<version>0.12</version>
 			<type>pom</type>
 
