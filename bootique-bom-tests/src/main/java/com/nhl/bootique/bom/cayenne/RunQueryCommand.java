@@ -8,6 +8,7 @@ import org.apache.cayenne.configuration.server.ServerRuntime;
 import org.apache.cayenne.exp.Expression;
 import org.apache.cayenne.exp.ExpressionFactory;
 import org.apache.cayenne.query.ObjectSelect;
+import org.apache.cayenne.query.SQLTemplate;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
@@ -59,6 +60,8 @@ public class RunQueryCommand extends CommandWithMetadata {
 
 	private void prepareDB() {
 		ObjectContext context = cayenneProvider.get().newContext();
+		
+		context.performGenericQuery(new SQLTemplate("T1", "delete from T1"));
 
 		for (int i = 0; i < 10; i++) {
 
