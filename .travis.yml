@@ -1,0 +1,17 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+branches:
+  only:
+    - master
+
+script: mvn clean deploy --settings travis_settings.xml
+
+# travis encrypt -r nhl/bootique-bom "CI_DEPLOY_USERNAME='name'"
+# travis encrypt -r nhl/bootique-bom "CI_DEPLOY_PASSWORD='password'"
+env:
+  global:
+    - secure: "k4L1C3nqYbZcCmLSRPvI7V81Mw2NSXrodgTccnCGRbEy+bXW/YcLAWv+4Y6xCHa54LxXS1OPfN5W84NLLWLeoLxqCtdaPZEsPloFkjbpBSIwxUTlzKK/L0NJ9IcfuXAsnHILYPuO7EBipqRtow74MckWi7F86ikgzmApKdEomTJHnveKrQ7YPDIgxedNfn6o9MeuZzWtEo2Xbf9f1NKROid3lO83w2CzGZ7eF6JhtbWc/SV+pW33S7W30050hvOzTqD1rkbKA+0/oR1qG8O3fKaDEXUNapP0TIf2KZVD9tQ/4mExyRi4RV+BvCUtuRo0a1hIBj+dTM27eFGVFcTl96RBbJRKufdpz3XtYBZu8xJgYbGsVZYH+CO7HC/k20M1IRhlz4TmQCNMJWIToOgh21+/fpJ/BS+MN3MJgy4tcz3X+fYpg/sneh3I2sf5MU3sAZ/4KbZMwQzrn0MI/FC5BwmdbOuDOQpZ/rD9ykCyC7oSFgwTT3vP8ypoUuerIGW9c94UP3G2bqfFB6XEn3D+wZMVJJfUH5zNCHAHoOlmgiMzrDBNOOlBQnKv1D0fXyqRPUs97YyA91uHuYCa5QyQkI5mLSvrazgwmWapvt5FohUn17M9tz0ka7FHoR3Mtgzte7iBi+BcqDm3dSGECcDQS8vY+XMJlpibWhogijR+fk0="
+    - secure: secure: "WnubJAMru9fgC62ZBXJH9/fKx7sFmf1/sgX8ekQ/jjqzPiDOJV4rJbRFhW5as8VR2PYWDhIamBoNT+vG6w9s+IEyrABcfznHhfkk2ztjY1ACsgxcsji+gnsKB8BTaxqMjs5DbtfUOYyOr0m27P7ICfdIupmOn4rbNlTlupoKjdclFp3OYxYjMu2evyOPgkwfthjT7iUa5JjjIqtODRH507rWp772FPUEO38TSFNEW53ilxPVcf3PrO/NxnG41+QXiUhAUvNyNfPZg1HfIcDt3v6dBBFp9GZUW8gyKxx4W4SqglIyg7UNQSZ24T63PGpeWXdEaQVG0sKOaWW76eoPHqZS+/ubGALkDS9hZcG7Dxw9lgt5UM1QJ/90CJcn85nVdgGZaCLW0+WfvaqlI1/zggodvCovya+63hDChp8PkiRUJ3SEy6TuedYcczW+t7MGPxN5yTXwtFo09ljLmJjcBHTgrF3kqi7ZVjrf9lSnDYixSUGeFFpz5tenG6hEFfItU4RsgfDT2ouLsNrlm9uvvVzz0zywYfBEis5YXQrNwbhkgnlPvD42m9DkACot9cLvnKY9aCfAkUygpbVFVX/QuncaFOjXr57WZg0EQcNeu1hRLEY+HFU9nsFFImONQtRHdX5/4KI+yvsibn/HbQ8mZoom8VT6joc3XQTrfmOHtGE="
