@@ -1,0 +1,13 @@
+jersey:
+  urlPattern: /lrservlet/*
+
+jetty:
+  context: /lr
+  connector:
+    port: 12011
+
+
+cayenne:
+  datasource: dummy
+
+
