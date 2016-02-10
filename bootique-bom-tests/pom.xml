@@ -44,17 +44,18 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-core</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.apache.derby</groupId>
 			<artifactId>derby</artifactId>
 			<scope>test</scope>
 		</dependency>
 
 		<!-- All the stuff coming from the BOM ("compile" scope) -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<!-- Allowing to mock stuff in the test apps -->
+			<scope>compile</scope>
+		</dependency>
 		<dependency>
 			<groupId>com.nhl.bootique</groupId>
 			<artifactId>bootique</artifactId>
