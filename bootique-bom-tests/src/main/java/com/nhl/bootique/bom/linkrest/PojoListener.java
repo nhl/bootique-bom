@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 import com.nhl.link.rest.annotation.listener.SelectServerParamsApplied;
 import com.nhl.link.rest.processor.BaseLinearProcessingStage;
-import com.nhl.link.rest.processor.ProcessingStage;
 import com.nhl.link.rest.runtime.processor.select.SelectContext;
 
 public class PojoListener {
