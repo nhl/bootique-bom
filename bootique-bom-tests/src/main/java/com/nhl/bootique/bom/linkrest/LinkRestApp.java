@@ -18,7 +18,7 @@ public class LinkRestApp extends BomTestApp implements Module {
 
 	@Override
 	protected void configure(Bootique bootique) {
-		Module jersey = new JerseyModule().packageRoot(LrResource1.class);
+		Module jersey = JerseyModule.builder().packageRoot(LrResource1.class).build();
 		Module cayenne = new CayenneModule().noConfig();
 		Module jdbcModuleReplacement = b -> b.bind(DataSourceFactory.class).toInstance(mock(DataSourceFactory.class));
 

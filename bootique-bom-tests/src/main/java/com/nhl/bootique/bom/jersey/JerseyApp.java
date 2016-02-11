@@ -13,7 +13,7 @@ public class JerseyApp extends BomTestApp implements Module {
 
 	@Override
 	protected void configure(Bootique bootique) {
-		Module jersey = new JerseyModule().packageRoot(Resource1.class).resource(Resource2.class);
+		Module jersey = JerseyModule.builder().packageRoot(Resource1.class).resource(Resource2.class).build();
 		bootique.modules(this, jersey).module(JettyModule.class);
 	}
 
