@@ -4,15 +4,21 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.nhl.bootique.bom</groupId>
-		<artifactId>bootique-bom-parent</artifactId>
-		<version>0.12-SNAPSHOT</version>
+		<groupId>com.nhl.bootique.parent</groupId>
+		<artifactId>bootique-parent</artifactId>
+		<version>0.10</version>
 	</parent>
 
 	<artifactId>bootique-bom-example-rest</artifactId>
 	<packaging>jar</packaging>
+	<version>0.12-SNAPSHOT</version>
 
 	<name>A minimalistic REST service example app</name>
+
+	<properties>
+		<main.class>com.nhl.bootique.bom.Main</main.class>
+	</properties>
+
 
 	<dependencyManagement>
 		<dependencies>
@@ -55,19 +61,26 @@
 	</dependencies>
 
 	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<artifactId>maven-deploy-plugin</artifactId>
-					<configuration>
-						<skip>true</skip>
-					</configuration>
-				</plugin>
-				<plugin>
-					<artifactId>maven-failsafe-plugin</artifactId>
-				</plugin>
-			</plugins>
-		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-failsafe-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+			</plugin>
+		</plugins>
 	</build>
 
 </project>
