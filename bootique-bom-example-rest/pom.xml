@@ -16,7 +16,7 @@
 	<name>A minimalistic REST service example app</name>
 
 	<properties>
-		<main.class>com.nhl.bootique.bom.Main</main.class>
+		<main.class>com.nhl.bootique.bom.Application</main.class>
 	</properties>
 
 
