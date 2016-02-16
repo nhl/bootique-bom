@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/nhl/bootique-bom.svg)](https://travis-ci.org/nhl/bootique-bom)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.nhl.bootique.bom/bootique-bom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.nhl.bootique.bom/bootique-bom/)
 
 A "Bill of Materials" (BOM) project, that helps user projects to maintain consistent versions of various [Bootique](https://github.com/nhl/bootique)-related dependencies. It declares a certain version of Bootique plus compatible versions of all standard Bootique extension Modules. Intended to be imported in an aplication ```pom.xml``` as shown below:
  
