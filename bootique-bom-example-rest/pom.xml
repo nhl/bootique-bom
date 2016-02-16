@@ -10,7 +10,7 @@
 
 	<artifactId>bootique-bom-example-rest</artifactId>
 	<packaging>jar</packaging>
-	<version>0.13-SNAPSHOT</version>
+	<version>0.12.1-SNAPSHOT</version>
 
 	<name>A minimalistic REST service example app</name>
 

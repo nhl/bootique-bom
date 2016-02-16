@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>com.nhl.bootique.bom</groupId>
 		<artifactId>bootique-bom-parent</artifactId>
-		<version>0.13-SNAPSHOT</version>
+		<version>0.12.1-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>bootique-bom</artifactId>
@@ -63,7 +63,7 @@
 			<dependency>
 				<groupId>com.nhl.bootique.linkrest</groupId>
 				<artifactId>bootique-linkrest</artifactId>
-				<version>0.6</version>
+				<version>0.7</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.liquibase</groupId>
