@@ -12,7 +12,7 @@
 	<artifactId>bootique-bom-parent</artifactId>
 	
 	<!-- Keeping this version in sync with Bootique version -->
-	<version>0.12.2-SNAPSHOT</version>
+	<version>0.12.2</version>
 	<packaging>pom</packaging>
 
 	<name>Parent of Bootique BOM</name>
@@ -29,7 +29,7 @@
 	<scm>
 		<developerConnection>scm:git:ssh://git@github.com/nhl/bootique-bom</developerConnection>
 		<url>https://github.com/nhl/bootique-bom</url>
-		<tag>HEAD</tag>
+		<tag>bootique-bom-parent-0.12.2</tag>
 	</scm>
 
 	<!-- Optional profile used to sign artifacts -->
