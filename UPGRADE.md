@@ -7,3 +7,4 @@
 ```java
 CayenneModule.builder()./* configure module */.build();
 ```
+* [bootique-jdbc #4](https://github.com/nhl/bootique-jdbc/issues/4) : Instrumentation is removed from ```bootique-jdbc``` and into a separate ```bootique-jdbc-instrumented``` module.If you relied on the DataSource metrics, change your import to the new Module.
