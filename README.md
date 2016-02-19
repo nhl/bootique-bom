@@ -44,4 +44,4 @@ A "Bill of Materials" (BOM) project, that helps user projects to maintain consis
 
 ## Upgrading
 
-See the "maven-central" badge above for the current production version of bootique-bom. When upgrading, don't forget to check [upgarde notes](https://github.com/nhl/bootique-bom/blob/master/UPGRADE.md) specific to your version.
+See the "maven-central" badge above for the current production version of bootique-bom. When upgrading, don't forget to check [upgrade notes](https://github.com/nhl/bootique-bom/blob/master/UPGRADE.md) specific to your version.
