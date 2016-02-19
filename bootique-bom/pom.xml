@@ -38,7 +38,7 @@
 			<dependency>
 				<groupId>com.nhl.bootique.jdbc.instrumented</groupId>
 				<artifactId>bootique-jdbc-instrumented</artifactId>
-				<version>0.10-SNAPSHOT</version>
+				<version>0.10.1</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.jersey</groupId>
