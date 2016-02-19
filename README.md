@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/nhl/bootique-bom.svg)](https://travis-ci.org/nhl/bootique-bom)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.nhl.bootique.bom/bootique-bom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.nhl.bootique.bom/bootique-bom/)
 
-A "Bill of Materials" (BOM) project, that helps user projects to maintain consistent versions of various [Bootique](https://github.com/nhl/bootique)-related dependencies. It declares a certain version of Bootique plus compatible versions of all standard Bootique extension Modules. Intended to be imported in an aplication ```pom.xml``` as shown below:
+A "Bill of Materials" (BOM) project, that helps user projects to maintain consistent versions of various [Bootique](https://github.com/nhl/bootique)-related dependencies. It declares a certain version of Bootique plus compatible versions of all standard Bootique extension Modules. Intended to be imported in an application ```pom.xml``` as shown below:
  
 ```xml
 <dependencyManagement>
@@ -10,8 +10,12 @@ A "Bill of Materials" (BOM) project, that helps user projects to maintain consis
 			<groupId>com.nhl.bootique.bom</groupId>
 			<artifactId>bootique-bom</artifactId>
 			
-			<!-- This version usually matches the version of the main Bootioque Module. -->
-			<version>0.12</version>
+			<!-- 
+			     Major and minor version of the bom usually matches that of the main Bootique module.
+			     Revision number (third version component) is increased with upgrades of other
+			     module dependencies.
+			-->
+			<version>0.12.2</version>
 			<type>pom</type>
 
 			<!-- Using special "import" scope
@@ -32,16 +36,12 @@ A "Bill of Materials" (BOM) project, that helps user projects to maintain consis
 		<artifactId>bootique</artifactId>
 	</dependency>
 	<dependency>
-		<groupId>com.nhl.bootique.cayenne</groupId>
-		<artifactId>bootique-cayenne</artifactId>
-	</dependency>
-	<dependency>
-		<groupId>com.nhl.bootique.jersey</groupId>
-		<artifactId>bootique-jersey</artifactId>
-	</dependency>
-	<dependency>
 		<groupId>com.nhl.bootique.logback</groupId>
 		<artifactId>bootique-logback</artifactId>
 	</dependency>
 </dependencies>
 ```
+
+## Upgrading
+
+See the "maven-central" badge above for the current production version of bootique-bom. When upgrading, don't forget to check [upgarde notes](https://github.com/nhl/bootique-bom/blob/master/UPGRADE.md) specific to your version.
