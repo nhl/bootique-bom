@@ -76,6 +76,11 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
+			<groupId>com.nhl.bootique.jersey.client</groupId>
+			<artifactId>bootique-jersey-client</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>com.nhl.bootique.jetty</groupId>
 			<artifactId>bootique-jetty</artifactId>
 			<scope>compile</scope>
