@@ -15,7 +15,7 @@ A "Bill of Materials" (BOM) project, that helps user projects to maintain consis
 			     Revision number (third version component) is increased with upgrades of other
 			     module dependencies.
 			-->
-			<version>0.12.2</version>
+			<version>0.12.3</version>
 			<type>pom</type>
 
 			<!-- Using special "import" scope
