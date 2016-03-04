@@ -12,7 +12,7 @@
 	<artifactId>bootique-bom-parent</artifactId>
 	
 	<!-- Keeping this version in sync with Bootique version -->
-	<version>0.15-SNAPSHOT</version>
+	<version>0.14.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Parent of Bootique BOM</name>
