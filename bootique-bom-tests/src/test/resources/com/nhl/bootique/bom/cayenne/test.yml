@@ -8,4 +8,5 @@ jdbc:
 cayenne:
   datasource: test2
   createSchema: true
-  config: com/nhl/bootique/bom/cayenne/cayenne-project.xml
+  configs: 
+    - com/nhl/bootique/bom/cayenne/cayenne-project.xml
