@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>com.nhl.bootique.bom</groupId>
 		<artifactId>bootique-bom-parent</artifactId>
-		<version>0.14.1-SNAPSHOT</version>
+		<version>0.15-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>bootique-bom</artifactId>
@@ -23,12 +23,12 @@
 			<dependency>
 				<groupId>com.nhl.bootique</groupId>
 				<artifactId>bootique</artifactId>
-				<version>0.14</version>
+				<version>0.15-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique</groupId>
 				<artifactId>bootique-test</artifactId>
-				<version>0.14</version>
+				<version>0.15-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.cayenne</groupId>
