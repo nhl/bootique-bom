@@ -21,12 +21,16 @@ public abstract class BomTestApp {
 
 	public CommandOutcome run(String... args) {
 
-		Bootique bootique = Bootique.app(args).bootLogger(createBootLogger());
+		BootLogger logger = createBootLogger();
+		Bootique bootique = Bootique.app(args).bootLogger(logger);
 		configure(bootique);
 
 		BQRuntime runtime = bootique.createRuntime();
 		try {
 			return runtime.getRunner().run();
+		} catch (Exception e) {
+			logger.stderr("Error", e);
+			return CommandOutcome.failed(1, getStderr());
 		} finally {
 			runtime.shutdown();
 		}

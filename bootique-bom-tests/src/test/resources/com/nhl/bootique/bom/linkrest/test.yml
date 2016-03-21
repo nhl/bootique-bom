@@ -7,7 +7,3 @@ jetty:
     port: 12011
 
 
-cayenne:
-  datasource: dummy
-
-

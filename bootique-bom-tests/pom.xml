@@ -12,12 +12,8 @@
 	<artifactId>bootique-bom-tests</artifactId>
 	<packaging>jar</packaging>
 
-	<name>A Bill of Materials (BOM) Bootique</name>
-	<description>Provides a Maven "Bill of Materials" (BOM) for the projects using Bootique to 
-		ensure consistency of the versions of all included standard extensions. Should be used 
-		with "imported" scope 
-		per https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Importing_Dependencies
-	</description>
+	<name>Bootique BOM Tests</name>
+	<description>Runs simple integration tests for the integrated dependencies.</description>
 
 	<dependencyManagement>
 		<dependencies>
@@ -147,11 +143,14 @@
 						<skip>true</skip>
 					</configuration>
 				</plugin>
-				<plugin>
-					<artifactId>maven-failsafe-plugin</artifactId>
-				</plugin>
+
 			</plugins>
 		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-failsafe-plugin</artifactId>
+			</plugin>
+		</plugins>
 	</build>
 
 </project>
