@@ -24,17 +24,17 @@
 			<dependency>
 				<groupId>com.nhl.bootique</groupId>
 				<artifactId>bootique</artifactId>
-				<version>0.15-SNAPSHOT</version>
+				<version>0.15</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique</groupId>
 				<artifactId>bootique-test</artifactId>
-				<version>0.15-SNAPSHOT</version>
+				<version>0.15</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.cayenne</groupId>
 				<artifactId>bootique-cayenne</artifactId>
-				<version>0.14-SNAPSHOT</version>
+				<version>0.14</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.jdbc</groupId>
@@ -49,27 +49,27 @@
 			<dependency>
 				<groupId>com.nhl.bootique.jersey</groupId>
 				<artifactId>bootique-jersey</artifactId>
-				<version>0.14-SNAPSHOT</version>
+				<version>0.14</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.jersey.client</groupId>
 				<artifactId>bootique-jersey-client</artifactId>
-				<version>0.4-SNAPSHOT</version>
+				<version>0.4</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.jetty</groupId>
 				<artifactId>bootique-jetty</artifactId>
-				<version>0.13-SNAPSHOT</version>
+				<version>0.13</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.jetty</groupId>
 				<artifactId>bootique-jetty-instrumented</artifactId>
-				<version>0.13-SNAPSHOT</version>
+				<version>0.13</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.jetty</groupId>
 				<artifactId>bootique-jetty-test</artifactId>
-				<version>0.13-SNAPSHOT</version>
+				<version>0.13</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.job</groupId>
@@ -84,7 +84,7 @@
 			<dependency>
 				<groupId>com.nhl.bootique.linkrest</groupId>
 				<artifactId>bootique-linkrest</artifactId>
-				<version>0.8-SNAPSHOT</version>
+				<version>0.8</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.liquibase</groupId>
@@ -94,7 +94,7 @@
 			<dependency>
 				<groupId>com.nhl.bootique.logback</groupId>
 				<artifactId>bootique-logback</artifactId>
-				<version>0.8</version>
+				<version>0.9</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.metrics</groupId>
@@ -104,12 +104,12 @@
 			<dependency>
 				<groupId>com.nhl.bootique.mvc</groupId>
 				<artifactId>bootique-mvc</artifactId>
-				<version>0.1-SNAPSHOT</version>
+				<version>0.1</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.mvc</groupId>
 				<artifactId>bootique-mvc-mustache</artifactId>
-				<version>0.1-SNAPSHOT</version>
+				<version>0.1</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.zookeeper</groupId>
