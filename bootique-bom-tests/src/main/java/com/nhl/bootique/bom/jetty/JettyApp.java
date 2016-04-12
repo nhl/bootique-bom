@@ -26,9 +26,9 @@ public class JettyApp extends BomTestApp implements Module {
 
 		Set<String> urlPatterns = Collections.singleton("/*");
 		Servlet servlet = new BomServlet();
-		JettyModule.contributeServlets(binder).addBinding().toInstance(new MappedServlet(servlet, urlPatterns));
+		JettyModule.contributeMappedServlets(binder).addBinding().toInstance(new MappedServlet(servlet, urlPatterns));
 
 		Filter filter = new BomFilter();
-		JettyModule.contributeFilters(binder).addBinding().toInstance(new MappedFilter(filter, urlPatterns, 0));
+		JettyModule.contributeMappedFilters(binder).addBinding().toInstance(new MappedFilter(filter, urlPatterns, 0));
 	}
 }
