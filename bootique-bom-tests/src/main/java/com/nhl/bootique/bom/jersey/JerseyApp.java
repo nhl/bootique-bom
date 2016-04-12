@@ -13,12 +13,13 @@ public class JerseyApp extends BomTestApp implements Module {
 
 	@Override
 	protected void configure(Bootique bootique) {
-		Module jersey = JerseyModule.builder().packageRoot(Resource1.class).resource(Resource2.class).build();
-		bootique.modules(this, jersey).module(JettyModule.class);
+		bootique.modules(this).modules(JettyModule.class, JerseyModule.class);
 	}
 
 	@Override
 	public void configure(Binder binder) {
 		JerseyModule.contributeFeatures(binder).addBinding().to(JerseyAppFeature.class);
+		JerseyModule.contributePackages(binder).addBinding().toInstance(Resource1.class.getPackage());
+		JerseyModule.contributeResources(binder).addBinding().to(Resource2.class);
 	}
 }
