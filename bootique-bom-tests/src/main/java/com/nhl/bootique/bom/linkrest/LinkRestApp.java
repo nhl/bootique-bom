@@ -18,15 +18,16 @@ public class LinkRestApp extends BomTestApp implements Module {
 
 	@Override
 	protected void configure(Bootique bootique) {
-		Module jersey = JerseyModule.builder().packageRoot(LrResource1.class).build();
 		Module cayenne = CayenneModule.builder().noConfig().build();
 		Module jdbcModuleReplacement = b -> b.bind(DataSourceFactory.class).toInstance(mock(DataSourceFactory.class));
 
-		bootique.modules(this, jersey, cayenne, jdbcModuleReplacement).modules(JettyModule.class, LinkRestModule.class);
+		bootique.modules(this, cayenne, jdbcModuleReplacement).modules(JettyModule.class, JerseyModule.class,
+				LinkRestModule.class);
 	}
 
 	@Override
 	public void configure(Binder binder) {
 		LinkRestModule.contributeExtraEntities(binder).addBinding().toInstance(LrEntityBuilder.build(ITEntity.class));
+		JerseyModule.contributeResources(binder).addBinding().to(LrResource1.class);
 	}
 }

@@ -6,7 +6,8 @@ import com.nhl.bootique.jersey.JerseyModule;
 public class Application {
 
 	public static void main(String[] args) {
-		JerseyModule jersey = JerseyModule.builder().packageRoot(HelloResource.class).build();
-		Bootique.app(args).module(jersey).autoLoadModules().run();
+		Bootique.app(args)
+				.module((binder) -> JerseyModule.contributeResources(binder).addBinding().to(HelloResource.class))
+				.autoLoadModules().run();
 	}
 }
