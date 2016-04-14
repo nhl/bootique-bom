@@ -49,14 +49,13 @@
 			<artifactId>bootique-jetty-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-		<!-- All the stuff coming from the BOM ("compile" scope) -->
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
-			<!-- Allowing to mock stuff in the test apps -->
-			<scope>compile</scope>
+			<scope>test</scope>
 		</dependency>
+
+		<!-- All the stuff coming from the BOM -->
 		<dependency>
 			<groupId>com.nhl.bootique</groupId>
 			<artifactId>bootique</artifactId>
@@ -92,7 +91,6 @@
 			<artifactId>bootique-jetty-instrumented</artifactId>
 			<scope>compile</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>com.nhl.bootique.job</groupId>
 			<artifactId>bootique-job</artifactId>

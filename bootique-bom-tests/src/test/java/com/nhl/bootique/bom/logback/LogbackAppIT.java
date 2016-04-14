@@ -9,19 +9,16 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 
-import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 
 import com.nhl.bootique.command.CommandOutcome;
+import com.nhl.bootique.test.BQTestRuntime;
 
 public class LogbackAppIT {
 
-	private LogbackApp app;
-
-	@Before
-	public void before() {
-		this.app = new LogbackApp();
-	}
+	@Rule
+	public LogbackApp app = new LogbackApp();
 
 	private File prepareLogFile(String name) {
 		File logFile = new File(name);
@@ -33,10 +30,12 @@ public class LogbackAppIT {
 
 	@Test
 	public void testRun_Help() {
-		CommandOutcome outcome = app.run("--help");
+
+		BQTestRuntime runtime = app.newRuntime().build("--help");
+		CommandOutcome outcome = runtime.run();
 		assertEquals(0, outcome.getExitCode());
 
-		String help = app.getStdout();
+		String help = runtime.getStdout();
 
 		assertTrue(help.contains("--help"));
 		assertTrue(help.contains("--config"));
@@ -46,7 +45,8 @@ public class LogbackAppIT {
 	public void testRun_Debug() throws IOException {
 		File logFile = prepareLogFile("target/logback/testRun_Debug.log");
 
-		CommandOutcome outcome = app.run("--config=src/test/resources/com/nhl/bootique/bom/logback/test-debug.yml");
+		CommandOutcome outcome = app.newRuntime()
+				.build("--config=src/test/resources/com/nhl/bootique/bom/logback/test-debug.yml").run();
 		assertEquals(0, outcome.getExitCode());
 
 		assertTrue(logFile.isFile());
@@ -62,7 +62,8 @@ public class LogbackAppIT {
 	public void testRun_Warn() throws IOException {
 		File logFile = prepareLogFile("target/logback/testRun_Warn.log");
 
-		CommandOutcome outcome = app.run("--config=src/test/resources/com/nhl/bootique/bom/logback/test-warn.yml");
+		CommandOutcome outcome = app.newRuntime()
+				.build("--config=src/test/resources/com/nhl/bootique/bom/logback/test-warn.yml").run();
 		assertEquals(0, outcome.getExitCode());
 
 		assertTrue(logFile.isFile());
