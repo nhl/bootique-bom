@@ -83,7 +83,7 @@
 			<dependency>
 				<groupId>com.nhl.bootique.linkrest</groupId>
 				<artifactId>bootique-linkrest</artifactId>
-				<version>0.9-SNAPSHOT</version>
+				<version>0.9</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.liquibase</groupId>
@@ -103,7 +103,7 @@
 			<dependency>
 				<groupId>com.nhl.bootique.mvc</groupId>
 				<artifactId>bootique-mvc</artifactId>
-				<version>0.2-SNAPSHOT</version>
+				<version>0.2</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.mvc</groupId>
