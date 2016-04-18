@@ -71,7 +71,8 @@ public class LogbackAppIT {
 		String logfileContents = Files.lines(logFile.toPath()).collect(joining("\n"));
 		assertFalse(logfileContents.contains("c.n.b.b.l.LogbackTestCommand: logback-test-debug"));
 		assertFalse(logfileContents.contains("c.n.b.b.l.LogbackTestCommand: logback-test-info"));
-		assertTrue(logfileContents.contains("c.n.b.b.l.LogbackTestCommand: logback-test-warn"));
+		assertTrue("Logfile contents: " + logfileContents,
+				logfileContents.contains("c.n.b.b.l.LogbackTestCommand: logback-test-warn"));
 		assertTrue(logfileContents.contains("c.n.b.b.l.LogbackTestCommand: logback-test-error"));
 	}
 
