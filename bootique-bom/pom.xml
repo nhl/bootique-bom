@@ -23,12 +23,12 @@
 			<dependency>
 				<groupId>com.nhl.bootique</groupId>
 				<artifactId>bootique</artifactId>
-				<version>0.16-SNAPSHOT</version>
+				<version>0.16</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique</groupId>
 				<artifactId>bootique-test</artifactId>
-				<version>0.16-SNAPSHOT</version>
+				<version>0.16</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.cayenne</groupId>
