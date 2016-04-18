@@ -45,8 +45,15 @@ public class LogbackAppIT {
 	public void testRun_Debug() throws IOException {
 		File logFile = prepareLogFile("target/logback/testRun_Debug.log");
 
-		CommandOutcome outcome = app.newRuntime()
-				.build("--config=src/test/resources/com/nhl/bootique/bom/logback/test-debug.yml").run();
+		BQTestRuntime runtime = app.newRuntime()
+				.build("--config=src/test/resources/com/nhl/bootique/bom/logback/test-debug.yml");
+		CommandOutcome outcome = runtime.run();
+
+		// stopping runtime to ensure the logs are flushed before we start
+		// making assertions...
+		// TODO: a new API in tests - runAndStop...
+		runtime.stop();
+
 		assertEquals(0, outcome.getExitCode());
 
 		assertTrue(logFile.isFile());
@@ -62,8 +69,15 @@ public class LogbackAppIT {
 	public void testRun_Warn() throws IOException {
 		File logFile = prepareLogFile("target/logback/testRun_Warn.log");
 
-		CommandOutcome outcome = app.newRuntime()
-				.build("--config=src/test/resources/com/nhl/bootique/bom/logback/test-warn.yml").run();
+		BQTestRuntime runtime = app.newRuntime()
+				.build("--config=src/test/resources/com/nhl/bootique/bom/logback/test-warn.yml");
+		CommandOutcome outcome = runtime.run();
+
+		// stopping runtime to ensure the logs are flushed before we start
+		// making assertions...
+		// TODO: a new API in tests - runAndStop...
+		runtime.stop();
+
 		assertEquals(0, outcome.getExitCode());
 
 		assertTrue(logFile.isFile());
