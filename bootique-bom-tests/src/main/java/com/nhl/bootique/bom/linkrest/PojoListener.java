@@ -23,7 +23,7 @@ public class PojoListener {
 		e2.setId(6);
 		e2.setName("name6");
 
-		context.getResponse().withObjects(Arrays.asList(e1, e2));
+		context.setObjects(Arrays.asList(e1, e2));
 
 		// terminate further processing
 		return null;

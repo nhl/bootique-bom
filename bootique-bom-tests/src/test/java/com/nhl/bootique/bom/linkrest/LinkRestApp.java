@@ -12,7 +12,6 @@ import com.nhl.bootique.jdbc.DataSourceFactory;
 import com.nhl.bootique.jersey.JerseyModule;
 import com.nhl.bootique.jetty.test.junit.JettyTestFactory;
 import com.nhl.bootique.linkrest.LinkRestModule;
-import com.nhl.link.rest.meta.LrEntityBuilder;
 
 public class LinkRestApp extends JettyTestFactory {
 
@@ -24,8 +23,6 @@ public class LinkRestApp extends JettyTestFactory {
 
 		Consumer<Bootique> config = (bootique) -> {
 			bootique.modules(JerseyModule.class, LinkRestModule.class).modules(cayenne, jdbc, (binder) -> {
-				LinkRestModule.contributeExtraEntities(binder).addBinding()
-						.toInstance(LrEntityBuilder.build(ITEntity.class));
 				JerseyModule.contributeResources(binder).addBinding().to(LrResource1.class);
 			});
 		};
