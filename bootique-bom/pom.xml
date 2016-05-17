@@ -53,7 +53,7 @@
 			<dependency>
 				<groupId>com.nhl.bootique.jersey.client</groupId>
 				<artifactId>bootique-jersey-client</artifactId>
-				<version>0.4</version>
+				<version>0.5-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.jetty</groupId>
