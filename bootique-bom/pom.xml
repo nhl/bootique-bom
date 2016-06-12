@@ -108,7 +108,7 @@
 			<dependency>
 				<groupId>com.nhl.bootique.mvc</groupId>
 				<artifactId>bootique-mvc</artifactId>
-				<version>0.2</version>
+				<version>0.3-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.mvc</groupId>
