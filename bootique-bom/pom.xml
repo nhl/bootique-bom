@@ -53,12 +53,12 @@
 			<dependency>
 				<groupId>com.nhl.bootique.jersey.client</groupId>
 				<artifactId>bootique-jersey-client</artifactId>
-				<version>0.5-SNAPSHOT</version>
+				<version>0.5</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.jersey.client</groupId>
 				<artifactId>bootique-jersey-client-instrumented</artifactId>
-				<version>0.5-SNAPSHOT</version>
+				<version>0.5</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.jetty</groupId>
@@ -88,7 +88,7 @@
 			<dependency>
 				<groupId>com.nhl.bootique.linkrest</groupId>
 				<artifactId>bootique-linkrest</artifactId>
-				<version>0.10-SNAPSHOT</version>
+				<version>0.10</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.liquibase</groupId>
@@ -108,12 +108,12 @@
 			<dependency>
 				<groupId>com.nhl.bootique.mvc</groupId>
 				<artifactId>bootique-mvc</artifactId>
-				<version>0.3-SNAPSHOT</version>
+				<version>0.3</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.mvc</groupId>
 				<artifactId>bootique-mvc-mustache</artifactId>
-				<version>0.3-SNAPSHOT</version>
+				<version>0.3</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.zookeeper</groupId>
