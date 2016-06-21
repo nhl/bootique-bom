@@ -116,6 +116,11 @@
 				<version>0.3</version>
 			</dependency>
 			<dependency>
+				<groupId>com.nhl.bootique.tapestry</groupId>
+				<artifactId>bootique-tapestry</artifactId>
+				<version>0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
 				<groupId>com.nhl.bootique.zookeeper</groupId>
 				<artifactId>bootique-zookeeper</artifactId>
 				<version>0.8</version>
