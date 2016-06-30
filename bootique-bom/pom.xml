@@ -36,6 +36,11 @@
 				<version>0.14</version>
 			</dependency>
 			<dependency>
+				<groupId>com.nhl.bootique.curator</groupId>
+				<artifactId>bootique-curator</artifactId>
+				<version>0.9-SNAPSHOT</version>
+			</dependency>
+			<dependency>
 				<groupId>com.nhl.bootique.jdbc</groupId>
 				<artifactId>bootique-jdbc</artifactId>
 				<version>0.10.1</version>
@@ -119,11 +124,6 @@
 				<groupId>com.nhl.bootique.tapestry</groupId>
 				<artifactId>bootique-tapestry</artifactId>
 				<version>0.1-SNAPSHOT</version>
-			</dependency>
-			<dependency>
-				<groupId>com.nhl.bootique.zookeeper</groupId>
-				<artifactId>bootique-zookeeper</artifactId>
-				<version>0.8</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
