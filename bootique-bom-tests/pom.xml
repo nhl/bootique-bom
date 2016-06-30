@@ -66,6 +66,11 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
+			<groupId>com.nhl.bootique.curator</groupId>
+			<artifactId>bootique-curator</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>com.nhl.bootique.jdbc</groupId>
 			<artifactId>bootique-jdbc</artifactId>
 			<scope>compile</scope>
@@ -128,11 +133,6 @@
 		<dependency>
 			<groupId>com.nhl.bootique.mvc</groupId>
 			<artifactId>bootique-mvc-mustache</artifactId>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.nhl.bootique.zookeeper</groupId>
-			<artifactId>bootique-zookeeper</artifactId>
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
