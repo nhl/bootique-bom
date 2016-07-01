@@ -15,7 +15,7 @@
 	<version>0.18-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Parent of Bootique BOM</name>
+	<name>bootique-bom-parent: Parent of Bootique BOM</name>
 	<description>
 		Parent POM of Bootique BOM and BOM tests modules.
 	</description>

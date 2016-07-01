@@ -11,11 +11,9 @@
 	<artifactId>bootique-bom</artifactId>
 	<packaging>pom</packaging>
 
-	<name>A Bill of Materials (BOM) for Bootique and its standard extensions</name>
+	<name>bootique-bom: "Bill of Materials" (BOM) for Bootique core and its standard extensions</name>
 	<description>Provides a Maven "Bill of Materials" (BOM) for the projects using Bootique to 
-		ensure consistency of the versions of all included standard extensions. Should be used 
-		with "imported" scope 
-		per https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Importing_Dependencies
+		ensure consistency of the versions of all included standard extensions.
 	</description>
 
 	<dependencyManagement>

@@ -11,7 +11,7 @@
 	<artifactId>bootique-bom-tests</artifactId>
 	<packaging>jar</packaging>
 
-	<name>Bootique BOM Tests</name>
+	<name>bootique-bom-tests: Bootique BOM integration tests</name>
 	<description>Runs simple integration tests for the integrated dependencies.</description>
 
 	<dependencyManagement>

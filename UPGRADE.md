@@ -1,5 +1,10 @@
 # UPGRADE INSTRUCTIONS FOR MODULES
 
+## 0.17
+
+* [bootique #62](https://github.com/nhl/bootique/issues/62) : To fully take advantage of the default main class, make sure you
+  upgrade ```com.nhl.bootique.parent:bootique-parent``` to version 0.11.
+
 ## 0.12.2
 
 * [bootique-cayenne #9](https://github.com/nhl/bootique-cayenne/issues/9) : CayenneModule ```noConfig``` and ```configName``` methods are moved into a builder, and constructor is made private. Now to set cayenne-...xml via API use something like this:
