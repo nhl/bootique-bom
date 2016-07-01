@@ -6,7 +6,7 @@ jdbc:
 
 
 cayenne:
-  dataSourceName: test2
+  datasource: test2
   createSchema: true
   configs: 
     - com/nhl/bootique/bom/cayenne/cayenne-project.xml
