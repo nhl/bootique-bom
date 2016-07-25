@@ -5,6 +5,10 @@
 * [bootique-cayenne #12](https://github.com/nhl/bootique-cayenne/issues/12) : ```CayenneModule.builder()``` is removed.
   Instead of using the builder, use YAML (or another form of) configuration. If you need a project-less Cayenne stack,
   simply do not reference any Cayenne projects (and make sure "cayenne-project.xml" is not on classpath).
+  
+* [bootique-curator #4](https://github.com/nhl/bootique-curator/issues/4) : ```bootique-zookeeper``` was renamed to
+  ```bootique-curator```, so the dependency import and Java package names need to be changed accordingly.
+
 
 ## 0.17
 
