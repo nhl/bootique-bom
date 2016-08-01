@@ -21,12 +21,12 @@
 			<dependency>
 				<groupId>com.nhl.bootique</groupId>
 				<artifactId>bootique</artifactId>
-				<version>0.18</version>
+				<version>0.19-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique</groupId>
 				<artifactId>bootique-test</artifactId>
-				<version>0.18</version>
+				<version>0.19-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.cayenne</groupId>
@@ -106,7 +106,7 @@
 			<dependency>
 				<groupId>com.nhl.bootique.metrics</groupId>
 				<artifactId>bootique-metrics</artifactId>
-				<version>0.6</version>
+				<version>0.7-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.mvc</groupId>
