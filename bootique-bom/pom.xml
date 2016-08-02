@@ -66,17 +66,17 @@
 			<dependency>
 				<groupId>com.nhl.bootique.jetty</groupId>
 				<artifactId>bootique-jetty</artifactId>
-				<version>0.16</version>
+				<version>0.17-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.jetty</groupId>
 				<artifactId>bootique-jetty-instrumented</artifactId>
-				<version>0.16</version>
+				<version>0.17-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.jetty</groupId>
 				<artifactId>bootique-jetty-test</artifactId>
-				<version>0.16</version>
+				<version>0.17-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>com.nhl.bootique.job</groupId>
