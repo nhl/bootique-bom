@@ -3,4 +3,4 @@
 
 A legacy (pre 0.19) "Bill of Materials" (BOM) collection of modules for [Bootique](http://bootique.io). 
 
-_Deprecated. Use the [this BOM](https://github.com/bootique/bootique-bom) instead as indicated in Bootique docs._
+**Deprecated. Use the [this BOM](https://github.com/bootique/bootique-bom) instead as indicated in Bootique docs.**
